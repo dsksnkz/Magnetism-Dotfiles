@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Magnetism Tools
+Comment=Open the Magnetism desktop control dashboard
+Exec=/home/matte/.local/bin/magnetism-tools
+Icon=preferences-system-symbolic
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=Hyprland;tools;clipboard;screenshot;calculator;timer;power;

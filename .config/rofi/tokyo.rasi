@@ -1,0 +1,58 @@
+* {
+    /* --- Primary (Deep, vibrant wave highlights) --- */
+    primary:                    #6ba4b0;
+    primary-fixed:              #a3d3df;
+    primary-fixed-dim:          #6ba4b0;
+    on-primary:                 #0a2d35;
+    on-primary-fixed:           #02191f;
+    on-primary-fixed-variant:   #1f464e;
+    primary-container:          #1f464e;
+    on-primary-container:       #a3d3df;
+
+    /* --- Secondary (Muted, deep teal water tones) --- */
+    secondary:                  #3e6b75;
+    secondary-fixed:            #5d8f9a;
+    secondary-fixed-dim:        #3e6b75;
+    on-secondary:               #091d22;
+    on-secondary-fixed:         #020d10;
+    on-secondary-fixed-variant: #23474f;
+    secondary-container:        #23474f;
+    on-secondary-container:     #b8dee6;
+
+    /* --- Tertiary (Soft, warm sunset reflections on ripples) --- */
+    tertiary:                   #dcc1a7;
+    tertiary-fixed:             #f7e6d7;
+    tertiary-fixed-dim:         #dcc1a7;
+    on-tertiary:                #3d2c1b;
+    on-tertiary-fixed:          #24170a;
+    on-tertiary-fixed-variant:  #564230;
+    tertiary-container:         #564230;
+    on-tertiary-container:      #f7e6d7;
+
+    /* --- Error (Muted red, adjusted to fit ocean palette) --- */
+    error:                      #e29f9f;
+    on-error:                   #4a1c1c;
+    error-container:            #6b2d2d;
+    on-error-container:         #f9dad6;
+
+    /* --- Surfaces & Backgrounds (Deep oceanic depths) --- */
+    surface:                    #0b1619;
+    on-surface:                 #d9e4e6;
+    on-surface-variant:         #a1b4b7;
+    outline:                    #71888c;
+    outline-variant:            #33464a;
+    shadow:                     #020708;
+    scrim:                      #020708;
+    inverse-surface:            #d9e4e6;
+    inverse-on-surface:         #1d2a2d;
+    inverse-primary:            #1f5b68;
+
+    /* --- Surface Containers (Varying depth layers) --- */
+    surface-dim:                #0b1619;
+    surface-bright:             #253539;
+    surface-container-lowest:   #060d0f;
+    surface-container-low:      #112024;
+    surface-container:          #16282d;
+    surface-container-high:     #21363c;
+    surface-container-highest:  #2c454c;
+}

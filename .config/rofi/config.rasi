@@ -1,0 +1,135 @@
+@theme "/dev/null"
+@import "colors.rasi"
+
+configuration {
+    modi: "drun,run,window";
+    display-drun: "󰀻  APPS";
+    display-run: "󰆍  RUN";
+    display-window: "󰖲  WINDOWS";
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font 11";
+    icon-theme: "breeze-dark";
+    show-icons: true;
+    matching: "fuzzy";
+    sort: true;
+    sorting-method: "fzf";
+    drun-match-fields: "name,generic,categories,keywords";
+    click-to-exit: true;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+    border-radius: 3px;
+    background-color: transparent;
+    text-color: @text;
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 760px;
+    border: 1px;
+    border-color: @border;
+    border-radius: 3px;
+    background-color: @black;
+}
+
+mainbox { children: [ inputbar, body, footer ]; }
+
+inputbar {
+    padding: 14px 16px;
+    spacing: 12px;
+    border: 0 0 1px 0;
+    border-color: @border;
+    border-radius: 3px 3px 0 0;
+    background-color: @surface;
+    children: [ textbox-prompt-colon, entry, case-indicator ];
+}
+
+textbox-prompt-colon { str: "󰍉"; text-color: @text; }
+entry { placeholder: "Search apps, commands, and windows"; placeholder-color: @muted; }
+case-indicator { text-color: @muted; }
+
+body { orientation: horizontal; children: [ mode-switcher, listview ]; }
+
+mode-switcher {
+    orientation: vertical;
+    width: 148px;
+    padding: 10px;
+    spacing: 5px;
+    border: 0 1px 0 0;
+    border-color: @border;
+    background-color: @surface;
+}
+
+button {
+    padding: 11px 12px;
+    border-radius: 3px;
+    text-color: @muted;
+    horizontal-align: 0.0;
+}
+
+button selected { background-color: @selected-bg; text-color: @selected-fg; }
+
+listview {
+    lines: 8;
+    columns: 1;
+    fixed-height: true;
+    scrollbar: false;
+    cycle: true;
+    dynamic: true;
+    padding: 10px;
+    spacing: 4px;
+}
+
+element {
+    padding: 8px 10px;
+    spacing: 12px;
+    border: 1px;
+    border-color: @black;
+    border-radius: 3px;
+    children: [ element-icon, element-text ];
+}
+
+element normal.normal,
+element alternate.normal { background-color: transparent; text-color: @text; }
+
+element selected.normal,
+element selected.active,
+element selected.urgent {
+    background-color: @selected-bg;
+    border-color: @selected-bg;
+    text-color: @selected-fg;
+}
+
+element normal.active,
+element normal.urgent { background-color: @raised; border-color: @border; text-color: @text; }
+
+element-icon { size: 26px; background-color: transparent; }
+element-text { vertical-align: 0.5; background-color: transparent; }
+
+element-text selected.normal,
+element-text selected.active,
+element-text selected.urgent { text-color: @selected-fg; }
+
+footer {
+    orientation: horizontal;
+    padding: 9px 14px;
+    border: 1px 0 0 0;
+    border-color: @border;
+    background-color: @surface;
+    children: [ textbox-shortcuts ];
+}
+
+textbox-shortcuts {
+    expand: false;
+    horizontal-align: 1.0;
+    str: "↑↓ navigate   ↵ open   esc close";
+    text-color: @muted;
+}
+
+message { padding: 10px; background-color: @black; }
+textbox,
+error-message { padding: 8px 10px; border-radius: 3px; background-color: @surface; text-color: @text; }
