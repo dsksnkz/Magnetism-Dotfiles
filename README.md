@@ -3,6 +3,8 @@
 A compact monochrome Hyprland setup for Arch Linux with smooth animations,
 3 px corners, a custom Quickshell bar, and a styled Rofi launcher.
 
+![Magnetism desktop preview](assets/magnetism-desktop.png)
+
 Includes Hyprland, Quickshell, Rofi, SwayNC, Kitty, GTK, Qt, btop, CAVA, and
 Fastfetch configurations. Quickshell replaces Waybar.
 
